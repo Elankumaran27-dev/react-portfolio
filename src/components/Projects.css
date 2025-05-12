@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #8e44ad;
+  --background-color: #0f172a;
+  --card-bg-color: #1e293b;
+  --hover-color: #6c5ce7;
+  --tech-badge-bg: #ecf0f1;
+  --tech-badge-color: #1e293b;
+}
+
+.projects-section {
+  padding: 80px 20px;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background-color: var(--card-bg-color);
+  border-radius: 15px;
+  padding: 25px;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 25px rgba(142, 68, 173, 0.4);
+}
+
+.project-title {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #dcdde1;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tech-badge {
+  background-color: var(--tech-badge-bg);
+  color: var(--tech-badge-color);
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: default;
+}
+
+.github-link {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: var(--hover-color);
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0px var(--secondary-color);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--secondary-color);
+  }
+  100% {
+    box-shadow: 0 0 0px var(--secondary-color);
+  }
+}
+
+.project-card.glow-on-hover:hover {
+  animation: pulseGlow 1.5s infinite;
+  border: 2px solid var(--secondary-color);
+  transform: scale(1.05);
+}
+

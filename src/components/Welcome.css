@@ -1,0 +1,185 @@
+/* Use of CSS Variables for Theme */
+:root {
+  --main-bg: #0f172a;
+  --text-color: #f8fafc;
+  --accent: #38bdf8;
+  --secondary-text: #cbd5e1;
+}
+
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--main-bg);
+  color: var(--text-color);
+}
+
+/* Welcome Section */
+.welcome-section {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  padding-top: 100px;
+  transition: padding-top 0.3s ease;
+}
+
+/* Add extra padding when menu is open */
+body.menu-open .welcome-section {
+  padding-top: 450px;
+}
+
+/* Welcome Container */
+.welcome-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Text Content */
+.text-content {
+  flex: 1;
+}
+
+/* Image Content */
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image-rectangle {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 3px solid var(--accent);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  animation: zoomIn 2s ease forwards;
+}
+
+/* Welcome Title */
+.welcome-title {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--accent);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+/* Typing Name */
+.typing-name {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--accent);
+  padding-right: 5px;
+}
+
+.typing-role {
+  font-size: 1.8rem;
+  color: var(--accent);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--accent);
+  padding-right: 5px;
+}
+
+.welcome-description {
+  font-size: 1.1rem;
+  color: var(--secondary-text);
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.contact-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: var(--main-bg);
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Animating Image */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Tablet and Below */
+@media (max-width: 1024px) {
+  .welcome-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image-rectangle {
+    width: 260px;
+    height: 300px;
+  }
+
+  .typing-name {
+    font-size: 2.2rem;
+  }
+
+  .typing-role {
+    font-size: 1.5rem;
+  }
+
+  .welcome-description {
+    font-size: 1rem;
+  }
+
+  .contact-btn {
+    padding: 0.75rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .profile-image-rectangle {
+    width: 240px;
+    height: 270px;
+  }
+
+  .typing-name {
+    font-size: 1.9rem;
+  }
+
+  .typing-role {
+    font-size: 1.4rem;
+  }
+
+  .contact-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,26 @@
+/* src/components/CodeWithElanLogo.css */
+.codewithelan-logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.codewithelan-logo .main-logo {
+  color: var(--primary-text-color);
+}
+
+.codewithelan-logo .highlight {
+  color: var(--accent-color);
+  margin-left: 4px;
+}
+
+.codewithelan-logo .tagline {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+  margin-top: 4px;
+}

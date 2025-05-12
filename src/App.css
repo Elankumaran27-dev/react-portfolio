@@ -1,0 +1,122 @@
+/* src/App.css */
+/* Define color variables */
+:root {
+  --primary-bg-color: #001f3d; /* New dark blue background */
+  --secondary-bg-color: #00345a; /* Slightly lighter blue */
+  --primary-text-color: #ffffff; /* Keep white text */
+  --secondary-text-color: #d3d3d3; /* Lighter gray text */
+  --accent-color: #1e90ff; /* Bright blue for accents */
+  --hover-color: #1e90ff; /* Bright blue for hover */
+}
+
+/* Ensure smooth scrolling for the entire app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set the background color and text color globally */
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+}
+
+/* General link styling */
+a {
+  text-decoration: none;
+  color: inherit; /* Make sure links inherit color from parent */
+}
+
+/* Make sure content doesn't overlap navbar */
+main {
+  padding-top: 60px; /* Space for fixed navbar */
+}
+
+/* Add some basic styling for the sections */
+section {
+  padding: 60px 20px;
+  min-height: 100vh;
+  background-color: var(--secondary-bg-color); /* Use the secondary background */
+  text-align: center;
+}
+
+/* Make sure headings and paragraphs stand out */
+h2 {
+  color: var(--accent-color); /* Light yellow for headings */
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: var(--secondary-text-color); /* Light gray for paragraphs */
+}
+
+/* Add transitions to smooth out hover effects */
+a {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Styling for the footer (optional) */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--secondary-bg-color); /* Use the secondary background for footer */
+  color: var(--secondary-text-color);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Styling for the navbar (if you want to include this here instead of Navbar.css) */
+.navbar {
+  background-color: var(--secondary-bg-color); /* Dark background color for the navbar */
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  color: var(--accent-color); /* Light yellow color for logo */
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar-links li {
+  margin-right: 30px;
+}
+
+.navbar-links a {
+  color: var(--primary-text-color); /* White text for links */
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--hover-color); /* Light yellow color on hover */
+  transform: scale(1.1); /* Slightly enlarge the link when hovered */
+}
+
+.app-wrapper {
+  overflow-x: hidden;
+  overflow-y:hidden;
+}

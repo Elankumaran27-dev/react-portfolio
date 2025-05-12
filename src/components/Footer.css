@@ -1,0 +1,131 @@
+:root {
+  --footer-bg: #0f172a;
+  --text-color: #f1f5f9;
+  --accent-color: #0ea5e9;
+  --accent-hover: #38bdf8;
+  --muted-text: #94a3b8;
+  --divider: #334155;
+}
+
+.footer-container {
+  background: var(--footer-bg);
+  color: var(--text-color);
+  padding: 3rem 1.5rem 2rem;
+  overflow-x: hidden;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 200px;
+}
+
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.brand-tagline {
+  font-size: 0.95rem;
+  color: var(--muted-text);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.footer-links,
+.footer-contact {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-hover);
+  transform: translateX(4px);
+}
+
+.footer-contact p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted-text);
+  transition: color 0.3s ease;
+}
+
+.footer-contact p:hover {
+  color: var(--accent-hover);
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: var(--divider);
+  margin: 2rem auto 1rem;
+  width: 75%;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: 1.5rem;
+}
+
+.footer-socials a {
+  color: var(--text-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--accent-hover);
+  transform: scale(1.2);
+}
+
+.footer-credit {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--muted-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-contact p {
+    justify-content: center;
+  }
+}

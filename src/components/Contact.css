@@ -5,15 +5,16 @@
   --accent: #22d3ee;
   --input-border: #334155;
   --input-focus: #38bdf8;
+
+  --alert-success-bg: #d1fae5;
+  --alert-success-text: #065f46;
+  --alert-error-bg: #fee2e2;
+  --alert-error-text: #991b1b;
 }
 
 /* Section styling with stunning gradient and floating effect */
 .contact-section {
-  background: linear-gradient(
-    to bottom right,
-    rgba(15, 23, 42, 0.95),
-    rgba(30, 41, 59, 0.9)
-  );
+  background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9));
   padding: 4rem 2rem;
   color: var(--text-light);
   position: relative;
@@ -121,6 +122,33 @@
   transform: translateY(-2px);
 }
 
+/* Floating Alert Styling */
+.form-message {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1c1c1c;
+}
+
+.form-message.success {
+  color: var(--alert-success-text);
+}
+
+.form-message.error {
+  color: var(--alert-error-text);
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Social Info */
 .contact-info {
   margin-top: 3rem;
@@ -155,4 +183,19 @@
 .social-link:hover {
   color: var(--input-focus);
   transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .form-message {
+    font-size: 0.9rem;
+  }
 }

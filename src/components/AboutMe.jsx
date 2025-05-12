@@ -7,19 +7,24 @@ const AboutMe = () => {
   const [showDetails, setShowDetails] = useState(false);
 
   useEffect(() => {
-    const content =
-      "I  am a Full Stack Developer with 2 years of experience in iOS development. I have transitioned to full-stack development using Java, React.js, and MySQL. I love learning new technologies and building creative, efficient applications.";
-    let i = 0;
-    const typing = setInterval(() => {
-      setText(prev => prev + content[i]);
+  const content =
+    "I'm a Full Stack Developer with 2 years of experience in iOS development. I have transitioned to full-stack development using Java, React.js, and MySQL. I love learning new technologies and building creative, efficient applications.";
+  
+  let i = 0;
+
+  const typing = setInterval(() => {
+    if (i < content.length) {
+      setText(prev => prev + content.charAt(i));
       i++;
-      if (i === content.length) {
-        clearInterval(typing);
-        setTimeout(() => setShowDetails(true), 500);
-      }
-    }, 20);
-    return () => clearInterval(typing);
-  }, []);
+    } else {
+      clearInterval(typing);
+      setTimeout(() => setShowDetails(true), 500);
+    }
+  }, 20);
+
+  return () => clearInterval(typing);
+}, []);
+
 
   return (
     <motion.section
